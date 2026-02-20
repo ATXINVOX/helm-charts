@@ -38,6 +38,16 @@ envFrom:
     - storage-secrets
     - s3-secret
 
+volumes:
+  - name: site-data
+    persistentVolumeClaim:
+      claimName: central-bench-sites
+
+volumeMounts:
+  - name: site-data
+    mountPath: /app/sites
+    readOnly: false
+
 # Resource configuration
 resources:
   limits:

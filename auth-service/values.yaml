@@ -42,11 +42,11 @@ envFrom:
 volumes:
   - name: site-data
     persistentVolumeClaim:
-      claimName: central-site-data
+      claimName: central-bench-sites
 volumeMounts:
   - name: site-data
     mountPath: /app/sites
-    readOnly: true
+    readOnly: false
 
 # Resource configuration
 resources:
