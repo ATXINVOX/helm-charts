@@ -45,7 +45,8 @@ volumes:
       claimName: central-bench-sites
 volumeMounts:
   - name: site-data
-    mountPath: /app/sites
+    mountPath: /app/central.atxinvox.com.au
+    subPath: frappe-sites/central.atxinvox.com.au
     readOnly: false
 
 # Resource configuration
