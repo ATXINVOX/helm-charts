@@ -2,7 +2,7 @@
 
 # Image configuration
 image:
-  name: auth-service
+  name: ghcr.io/atxinvox/auth-service
   tag: latest
 
 # Service configuration

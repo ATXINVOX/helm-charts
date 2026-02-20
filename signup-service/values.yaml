@@ -2,7 +2,7 @@
 
 # Image configuration
 image:
-  name: signup-service
+  name: ghcr.io/atxinvox/signup-service
   tag: latest
 
 # Service configuration

@@ -2,7 +2,7 @@
 
 # Image configuration
 image:
-  name: file-metadata-service
+  name: ghcr.io/atxinvox/file-metadata-service
   tag: latest
 
 # Service configuration
