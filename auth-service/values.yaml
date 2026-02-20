@@ -38,6 +38,16 @@ envFrom:
     - auth-secrets
     - database-secret
 
+# Volume configuration
+volumes:
+  - name: site-data
+    persistentVolumeClaim:
+      claimName: central-site-data
+volumeMounts:
+  - name: site-data
+    mountPath: /app/sites
+    readOnly: true
+
 # Resource configuration
 resources:
   limits:
