@@ -45,7 +45,7 @@ volumes:
       claimName: central-bench-sites
 volumeMounts:
   - name: site-data
-    mountPath: /app/sites/frappe-sites
+    mountPath: /app/sites
     readOnly: false
 
 # Resource configuration
