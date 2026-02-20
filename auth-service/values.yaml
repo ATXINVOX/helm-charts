@@ -2,7 +2,9 @@
 
 # Image configuration
 image:
-  name: ghcr.io/atxinvox/auth-service
+  registry: ghcr.io
+  namespace: atxinvox
+  name: auth-service
   tag: latest
 
 # Secret for pulling images from private registry

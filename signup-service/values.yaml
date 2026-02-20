@@ -2,7 +2,9 @@
 
 # Image configuration
 image:
-  name: ghcr.io/atxinvox/signup-service
+  registry: ghcr.io
+  namespace: atxinvox
+  name: signup-service
   tag: latest
 
 # Secret for pulling images from private registry

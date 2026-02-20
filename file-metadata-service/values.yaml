@@ -2,7 +2,9 @@
 
 # Image configuration
 image:
-  name: ghcr.io/atxinvox/file-metadata-service
+  registry: ghcr.io
+  namespace: atxinvox
+  name: file-metadata-service
   tag: latest
 
 # Secret for pulling images from private registry
