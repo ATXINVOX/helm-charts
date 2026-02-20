@@ -5,6 +5,10 @@ image:
   name: ghcr.io/atxinvox/file-metadata-service
   tag: latest
 
+# Secret for pulling images from private registry
+imagePullSecrets:
+  - name: ghcr-pull-secret
+
 # Service configuration
 service:
   ports:
