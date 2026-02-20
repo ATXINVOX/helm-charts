@@ -1,0 +1,3 @@
+[submodule "invox-service-deploy"]
+	path = invox-service-deploy
+	url = https://github.com/ATXINVOX/invox-service-deploy.git

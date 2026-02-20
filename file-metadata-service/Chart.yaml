@@ -8,4 +8,4 @@ appVersion: "latest"
 dependencies:
   - name: invox-service-deploy
     version: "0.1.0"
-    repository: "file://../../invox-service-deploy"
+    repository: "file://../invox-service-deploy"
