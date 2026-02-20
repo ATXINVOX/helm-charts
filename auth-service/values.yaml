@@ -1,0 +1,61 @@
+# Auth Service Configuration
+
+# Image configuration
+image:
+  name: auth-service
+  tag: latest
+
+# Service configuration
+service:
+  ports:
+    - name: http
+      port: 80
+      containerPort: 8000
+      targetPort: http
+
+# Health check configuration
+probes:
+  liveness:
+    enabled: true
+    path: /health
+    initialDelaySeconds: 30
+  readiness:
+    enabled: true
+    path: /health
+    initialDelaySeconds: 5
+
+# Environment configuration
+envFrom:
+  configMaps:
+    - auth-config
+  secrets:
+    - auth-secrets
+    - database-secret
+
+# Resource configuration
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 250m
+    memory: 256Mi
+
+# Autoscaling configuration
+autoscaling:
+  enabled: false
+  minReplicas: 2
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 70
+
+# Ingress configuration
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts:
+    - host: auth.atxinvox.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []

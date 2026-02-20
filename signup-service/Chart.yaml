@@ -1,0 +1,11 @@
+apiVersion: v2
+name: signup-service
+description: ATXINVOX Signup Service Helm Chart
+type: application
+version: 0.1.0
+appVersion: "latest"
+
+dependencies:
+  - name: invox-service-deploy
+    version: "0.1.0"
+    repository: "https://github.com/ATXINVOX/invox-service-deploy"
