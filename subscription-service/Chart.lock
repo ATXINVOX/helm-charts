@@ -1,0 +1,6 @@
+dependencies:
+- name: invox-service-deploy
+  repository: file://../invox-service-deploy
+  version: 0.1.0
+digest: sha256:3d27e1d1b13616a08ceedfb2a3e69e4516caf8a816a475d850107865401c5da5
+generated: "2026-02-23T00:00:00.000000+00:00"
