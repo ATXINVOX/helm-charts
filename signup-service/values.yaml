@@ -6,6 +6,7 @@ image:
   namespace: atxinvox
   name: signup-service
   tag: latest
+  pullPolicy: Always
 
 # Secret for pulling images from private registry
 imagePullSecrets:
