@@ -65,3 +65,30 @@ ingress:
         - path: /
           pathType: Prefix
   tls: []
+
+configMap:
+  data:
+    CENTRAL_SITE_URL: https://central-site.atxinvox.com.au
+    DB_HOST: frappe-mariadb.mariadb.svc.cluster.local
+    DB_NAME: _a8adf179_central_atxinvox_com_au
+    DB_PORT: "3306"
+    FRAPPE_SITE: central.atxinvox.com.au
+    LOG_LEVEL: DEBUG
+    REDIS_HOST: central-bench-redis-cache
+    REDIS_PORT: "6379"
+    AWS_ENDPOINT: http://minio.minio.svc.cluster.local:9000
+    AWS_TENTANT_ID: minioadmin
+    AWS_ACCESS_KEY_ID: minioadmin
+    AWS_SECRET_ACCESS_KEY: minioadmin
+    AWS_REGION: us-east-1
+    BUCKET_NAME: vyogo-assets
+    AUTH_PUBLIC_KEY: |-
+      -----BEGIN PUBLIC KEY-----
+      MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp8ID4iSk47T8gGjYcm1N
+      69HOSTTaBnOpjkn79CzMRemX77gAWn+/z3RoKgaJ9+KQ7wxGlkE0RoOv4fxgZZIz
+      vQxmti3wPK0yQN/hAo+lKGWqdyeTVSADzebUN/IlLmg9DkPe+gjVRMEU5zvUuPeJ
+      cw9dI2eFIuRCgRpQ9HnLazg4oCwBqihndxMaKyC98SC0Jl3Dwizpms0zksbFAa37
+      YI61NtHvYBlbeIpyzdoor+6D8c42QPvQSmlLKXngsE54iQYwhLt2p5tEqGaMVpf5
+      A4iS6oju6zoIHja8BjUioGql1+H69hQPapqQyCsvKUGGooqNeOUz4kdVfwGEi1y0
+      +QIDAQAB
+      -----END PUBLIC KEY-----

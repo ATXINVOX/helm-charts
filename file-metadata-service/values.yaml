@@ -66,3 +66,14 @@ ingress:
         - path: /
           pathType: Prefix
   tls: []
+
+configMap:
+  data:
+    CENTRAL_SITE_URL: http://central-bench-nginx.frappe.svc.cluster.local:8080
+    DB_HOST: frappe-mariadb.mariadb.svc.cluster.local
+    DB_NAME: _a8adf179_central_atxinvox_com_au
+    DB_PORT: "3306"
+    FRAPPE_SITE: central.atxinvox.com.au
+    LOG_LEVEL: DEBUG
+    REDIS_HOST: central-bench-redis-cache
+    REDIS_PORT: "6379"
