@@ -40,15 +40,8 @@ envFrom:
     - database-secret
 
 # Volume configuration
-volumes:
-  - name: site-data
-    persistentVolumeClaim:
-      claimName: central-bench-sites
-volumeMounts:
-  - name: site-data
-    mountPath: /app/central.atxinvox.com.au
-    subPath: frappe-sites/central.atxinvox.com.au
-    readOnly: false
+volumes: []
+volumeMounts: []
 
 # Resource configuration
 resources:
