@@ -7,6 +7,7 @@ image:
   name: auth-service
   tag: latest
   pullPolicy: Always
+  pullPolicy: Always
 
 # Secret for pulling images from private registry
 imagePullSecrets:
