@@ -31,11 +31,7 @@ probes:
     initialDelaySeconds: 5
 
 # Environment configuration
-envFrom:
-  configMaps:
-    - sms-email-otp-mock-config
-  secrets:
-    - sms-email-otp-mock-secrets
+envFrom: {}
 
 # Resource configuration
 resources:

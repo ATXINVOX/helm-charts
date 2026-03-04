@@ -31,11 +31,7 @@ probes:
     initialDelaySeconds: 5
 
 # Environment configuration
-envFrom:
-  configMaps:
-    - abn-validation-config
-  secrets:
-    - abn-validation-secrets
+envFrom: {}
 
 # Resource configuration
 resources:
