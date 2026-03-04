@@ -1,0 +1,11 @@
+apiVersion: v2
+name: abn-validation-service
+description: ATXINVOX ABN Validation Service Helm Chart
+type: application
+version: 0.1.0
+appVersion: "latest"
+
+dependencies:
+  - name: invox-service-deploy
+    version: "0.1.0"
+    repository: "file://../invox-service-deploy"

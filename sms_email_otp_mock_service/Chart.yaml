@@ -1,0 +1,11 @@
+apiVersion: v2
+name: sms-email-otp-mock-service
+description: ATXINVOX SMS Email OTP Mock Service Helm Chart
+type: application
+version: 0.1.0
+appVersion: "latest"
+
+dependencies:
+  - name: invox-service-deploy
+    version: "0.1.0"
+    repository: "file://../invox-service-deploy"

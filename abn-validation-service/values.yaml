@@ -1,0 +1,66 @@
+# ABN Validation Service Configuration
+
+# Image configuration
+image:
+  registry: ghcr.io
+  namespace: atxinvox
+  name: abn-validation-service
+  tag: latest
+
+# Secret for pulling images from private registry
+imagePullSecrets:
+  - name: ghcr-pull-secret
+
+# Service configuration
+service:
+  ports:
+    - name: http
+      port: 80
+      containerPort: 8080
+      targetPort: http
+
+# Health check configuration
+probes:
+  liveness:
+    enabled: true
+    path: /health
+    initialDelaySeconds: 30
+  readiness:
+    enabled: true
+    path: /health
+    initialDelaySeconds: 5
+
+# Environment configuration
+envFrom:
+  configMaps:
+    - abn-validation-config
+  secrets:
+    - abn-validation-secrets
+
+# Resource configuration
+resources:
+  limits:
+    cpu: 250m
+    memory: 256Mi
+  requests:
+    cpu: 50m
+    memory: 128Mi
+
+# Autoscaling configuration
+autoscaling:
+  enabled: false
+  minReplicas: 2
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 70
+
+# Ingress configuration
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts:
+    - host: abn-validation.atxinvox.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []
