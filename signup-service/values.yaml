@@ -82,5 +82,7 @@ configMap:
     FRAPPE_SITE: central.atxinvox.com.au
     LOG_LEVEL: DEBUG
     REDIS_HOST: central-bench-test-redis-cache
+    REDIS_CACHE_HOST: central-bench-test-redis-cache
+    REDIS_QUEUE_HOST: central-bench-test-redis-queue
     REDIS_PORT: "6379"
     DB_USER: _ed0da9a7_central_atxinvox_com_au
